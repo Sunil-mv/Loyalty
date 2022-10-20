@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<body>
+    <h1>Question</h1>
+    <textarea id="q" rows="4" cols="50" placeholder="type here"></textarea><br></br>
+    <h2>Answer</h2>
+    <textarea id="a" rows="4" cols="50" placeholder="type here"></textarea><br></br>
+    <input type="submit" onclick="question()" value="Next">
+<script>
+    function question(){
+        var question=document.getElementById("q").value;
+        var answer=document.getElementById("a").value;
+        localStorage.setItem("myquest",question)
+        localStorage.setItem("myanswer",answer)
+        console.log(question)
+        console.log(answer)
+        location.replace("./answer.html")
+    }
+</script>
+</body>
